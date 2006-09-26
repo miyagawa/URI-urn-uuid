@@ -17,3 +17,7 @@ isa_ok $uri, 'URI::urn::uuid';
 is $uri->uuid, undef, "invalid uuid format - undef";
 is $uri->uuid_binary, undef, "invalid uuid format - undef";
 
+$uri = URI->new("urn:uuid:");
+$uri->uuid("f81d4fae-7dec-11d0-a765-00a0c91e6bf6");
+is $uri->uuid, "f81d4fae-7dec-11d0-a765-00a0c91e6bf6";
+

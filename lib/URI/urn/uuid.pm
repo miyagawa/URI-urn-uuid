@@ -1,7 +1,7 @@
 package URI::urn::uuid;
 
 use strict;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use base qw(URI::urn);
 use Data::UUID;
@@ -36,6 +36,9 @@ URI::urn::uuid - UUID URN Namespace
   my $uri = URI->new("urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6");
   $uri->uuid;        # f81d4fae-7dec-11d0-a765-00a0c91e6bf6
   $uri->uuid_binary; # in 128 bit binary form of Data::UUID
+
+  $uri = URI->new("urn:uuid:");
+  $uri->uuid( lc Data::UUID->new->create_str );
 
 =head1 DESCRIPTION
 
