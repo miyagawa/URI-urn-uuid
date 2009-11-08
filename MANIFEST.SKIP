@@ -10,3 +10,5 @@
 \.gz$
 \.cvsignore
 \.git/
+\.gitignore
+\.shipit
